@@ -59,5 +59,16 @@ class CustomerServiceTest {
 
     @Test
     void getCustomer() {
+        //given
+        Customer customer = new Customer(1L,
+                "Kushal Puri",
+                "1234",
+                "kushal@gmail.com");
+        customerRepository.save(customer);
+        //when
+        Customer actual = underTest.getCustomer(1L);
+
+        //then
+        assertEquals(customer.getName(),actual.getName());
     }
 }

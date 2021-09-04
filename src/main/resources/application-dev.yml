@@ -18,7 +18,7 @@ server:
         include-binding-errors: always
         include-message: always
         include-stacktrace: on_trace_param
-    port: 8081.0
+    port: 8081
 spring:
     datasource:
         driverClassName: org.h2.Driver
